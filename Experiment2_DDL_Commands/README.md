@@ -105,123 +105,155 @@ CREATE TABLE Table_Name (
 
 **Question 1**
 --
--- Paste Question 1 here
+![Question1](https://raw.githubusercontent.com/dharun06/files/refs/heads/main/Q1.png)
 
 ```sql
--- Paste your SQL code below for Question 1
+ALTER TABLE Student_details
+ADD COLUMN Mobilenumber number;
 ```
 
 **Output:**
 
-![Output1](output.png)
+![Output1](https://raw.githubusercontent.com/dharun06/files/refs/heads/main/A1.png)
 
 **Question 2**
 ---
--- Paste Question 2 here
+![Question2](https://raw.githubusercontent.com/dharun06/files/refs/heads/main/Q2.png)
 
 ```sql
--- Paste your SQL code below for Question 2
+create table Employees(
+    EmployeeID INTEGER,
+    FirstName TEXT,
+    LastName TEXT,
+    HireDate DATE
+);
 ```
 
 **Output:**
 
-![Output2](output.png)
+![Output2](https://github.com/dharun06/files/blob/main/A2.png?raw=true)
 
 **Question 3**
 ---
--- Paste Question 3 here
+![Question3](https://raw.githubusercontent.com/dharun06/files/refs/heads/main/Q3.png)
 
 ```sql
--- Paste your SQL code below for Question 3
+insert into Employee select * from Former_employees
 ```
 
 **Output:**
 
-![Output3](output.png)
+![Output3](https://github.com/dharun06/files/blob/main/A3.png?raw=true)
 
 **Question 4**
 ---
--- Paste Question 4 here
+![Question4](https://raw.githubusercontent.com/dharun06/files/refs/heads/main/Q4.png)
 
 ```sql
--- Paste your SQL code below for Question 4
+alter table Companies add column designation varchar(50);
+alter table Companies add column net_salary number;
+alter table Companies add column dob date;
+
 ```
 
 **Output:**
 
-![Output4](output.png)
+![Output4](https://github.com/dharun06/files/blob/main/A4.png?raw=true)
 
 **Question 5**
 ---
--- Paste Question 5 here
+![Question5](https://raw.githubusercontent.com/dharun06/files/refs/heads/main/Q5.png)
 
 ```sql
--- Paste your SQL code below for Question 5
+create table Invoices(
+    InvoiceID integer primary key,
+    InvoiceDate date,
+    DueDate date check (DueDate > InvoiceDate),
+    Amount real check (Amount > 0)
+);
 ```
 
 **Output:**
 
-![Output5](output.png)
+![Output5](https://github.com/dharun06/files/blob/main/A5.png?raw=true)
 
 **Question 6**
 ---
--- Paste Question 6 here
+![Question6](https://raw.githubusercontent.com/dharun06/files/refs/heads/main/Q6.png)
 
 ```sql
--- Paste your SQL code below for Question 6
+insert into Student_details (RollNo, Name, Gender, Subject, MARKS) VALUES (205,'Olivia Green','F','','');
+insert into Student_details (RollNo, Name, Gender, Subject, MARKS) VALUES (207,'Liam Smith','M','Mathematic',85);
+insert into Student_details (RollNo, Name, Gender, Subject, MARKS) VALUES (208,'Sophia Johns','F','Science','');
 ```
 
 **Output:**
 
-![Output6](output.png)
+![Output6](https://github.com/dharun06/files/blob/main/A6.png?raw=true)
 
 **Question 7**
 ---
--- Paste Question 7 here
+![Question7](https://raw.githubusercontent.com/dharun06/files/refs/heads/main/Q7.png)
 
 ```sql
--- Paste your SQL code below for Question 7
+create table orders(
+    ord_id not null,
+    item_id text not null,
+    ord_date date,
+    ord_qty integer,
+    cost integer,
+    primary key (item_id,ord_date),
+    check (length(ord_id) = 4)
+);
 ```
 
 **Output:**
 
-![Output7](output.png)
+![Output7](https://github.com/dharun06/files/blob/main/A7.png?raw=true)
 
 **Question 8**
 ---
--- Paste Question 8 here
-
+![Ques8](https://github.com/dharun06/files/blob/main/Q8.png)
 ```sql
--- Paste your SQL code below for Question 8
+insert into Employee values (1,'Sarah Parker', 'Manager', 'HR', 60000)
 ```
 
 **Output:**
 
-![Output8](output.png)
+![Output8](https://github.com/dharun06/files/blob/main/A8.png?raw=true)
 
 **Question 9**
 ---
--- Paste Question 9 here
+![Question9](https://raw.githubusercontent.com/dharun06/files/refs/heads/main/Q9.png)
 
 ```sql
--- Paste your SQL code below for Question 9
+create table Employees(
+    EmployeeID integer primary key,
+    FirstName text not null,
+    LastName text not null,
+    Email varchar unique,
+    Salary integer,
+    DepartmentID integer,
+    foreign key (DepartmentID) references Departments(DepartmentID),
+    check (Salary > 0)
+);
 ```
 
 **Output:**
 
-![Output9](output.png)
+![Output9](https://raw.githubusercontent.com/dharun06/files/refs/heads/main/A9.png)
 
 **Question 10**
 ---
--- Paste Question 10 here
+![QuestionQ](https://raw.githubusercontent.com/dharun06/files/refs/heads/main/QQ.png)
 
 ```sql
--- Paste your SQL code below for Question 10
+INSERT INTO Student_details (RollNo, Name, Gender) values (204, 'Samuel Black', 'M');
 ```
 
 **Output:**
 
-![Output10](output.png)
+![Output10](https://github.com/dharun06/files/blob/main/AA.png?raw=true)
 
 
 ## RESULT
